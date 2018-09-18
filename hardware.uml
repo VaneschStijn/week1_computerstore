@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>be.pxl.computerstore.hardware</OriginalElement>
+  <nodes>
+    <node x="580.0" y="325.0">be.pxl.computerstore.hardware.Mouse</node>
+    <node x="418.00000000000006" y="325.0">be.pxl.computerstore.hardware.GamingController</node>
+    <node x="438.50000000000006" y="212.0">be.pxl.computerstore.hardware.Peripheral</node>
+    <node x="559.5" y="190.0">be.pxl.computerstore.hardware.ComputerCase</node>
+    <node x="876.5" y="190.0">be.pxl.computerstore.hardware.Processor</node>
+    <node x="447.0" y="411.0">be.pxl.computerstore.hardware.TooManyPeripheralsException</node>
+    <node x="268.0" y="411.0">be.pxl.computerstore.hardware.KeyboardLayout</node>
+    <node x="760.5" y="212.0">be.pxl.computerstore.hardware.HardDisk</node>
+    <node x="640.75" y="0.0">be.pxl.computerstore.hardware.ComputerComponent</node>
+    <node x="158.0" y="314.0">be.pxl.computerstore.hardware.Keyboard</node>
+    <node x="0.0" y="411.0">be.pxl.computerstore.hardware.ComputerSystem</node>
+    <node x="683.0" y="325.0">be.pxl.computerstore.hardware.Monitor</node>
+    <node x="0.0" y="314.0">be.pxl.computerstore.hardware.WebCam</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="be.pxl.computerstore.hardware.ComputerCase" target="be.pxl.computerstore.hardware.ComputerComponent">
+      <point x="0.0" y="-37.0" />
+      <point x="650.0" y="170.0" />
+      <point x="707.125" y="170.0" />
+      <point x="-22.125" y="70.0" />
+    </edge>
+    <edge source="be.pxl.computerstore.hardware.WebCam" target="be.pxl.computerstore.hardware.Peripheral">
+      <point x="0.0" y="-26.0" />
+      <point x="69.0" y="284.0" />
+      <point x="448.6" y="284.0" />
+      <point x="-40.400000000000006" y="15.0" />
+    </edge>
+    <edge source="be.pxl.computerstore.hardware.Monitor" target="be.pxl.computerstore.hardware.Peripheral">
+      <point x="0.0" y="-15.0" />
+      <point x="728.0" y="284.0" />
+      <point x="529.4000000000001" y="284.0" />
+      <point x="40.400000000000034" y="15.0" />
+    </edge>
+    <edge source="be.pxl.computerstore.hardware.GamingController" target="be.pxl.computerstore.hardware.Peripheral">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="be.pxl.computerstore.hardware.Processor" target="be.pxl.computerstore.hardware.ComputerComponent">
+      <point x="0.0" y="-37.0" />
+      <point x="978.5" y="160.0" />
+      <point x="795.625" y="160.0" />
+      <point x="66.375" y="70.0" />
+    </edge>
+    <edge source="be.pxl.computerstore.hardware.Keyboard" target="be.pxl.computerstore.hardware.Peripheral">
+      <point x="0.0" y="-26.0" />
+      <point x="278.0" y="294.0" />
+      <point x="468.80000000000007" y="294.0" />
+      <point x="-20.19999999999999" y="15.0" />
+    </edge>
+    <edge source="be.pxl.computerstore.hardware.Mouse" target="be.pxl.computerstore.hardware.Peripheral">
+      <point x="0.0" y="-15.0" />
+      <point x="621.5" y="294.0" />
+      <point x="509.2000000000001" y="294.0" />
+      <point x="20.200000000000045" y="15.0" />
+    </edge>
+    <edge source="be.pxl.computerstore.hardware.HardDisk" target="be.pxl.computerstore.hardware.ComputerComponent">
+      <point x="0.0" y="-15.0" />
+      <point x="808.5" y="170.0" />
+      <point x="751.375" y="170.0" />
+      <point x="22.125" y="70.0" />
+    </edge>
+    <edge source="be.pxl.computerstore.hardware.Peripheral" target="be.pxl.computerstore.hardware.ComputerComponent">
+      <point x="0.0" y="-15.0" />
+      <point x="489.00000000000006" y="160.0" />
+      <point x="662.875" y="160.0" />
+      <point x="-66.375" y="70.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9402116402116402" x="556.3607203151379" y="244.9999999999999" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>Changed Files</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
