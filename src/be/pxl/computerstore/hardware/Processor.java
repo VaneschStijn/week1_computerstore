@@ -3,6 +3,7 @@ package be.pxl.computerstore.hardware;
 public class Processor extends ComputerComponent {
     private double clockspeed;
     private static final double MIN_CLOCKSPEED = 0.7;
+
     public Processor(String vendor, String name, double price, double clockspeed){
         super(vendor, name, price);
         if(clockspeed > MIN_CLOCKSPEED){

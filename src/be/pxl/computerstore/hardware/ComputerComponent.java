@@ -3,7 +3,7 @@ package be.pxl.computerstore.hardware;
 import java.util.Random;
 
 public class ComputerComponent {
-    private final String vendor;
+    private String vendor;
     private String name;
     private double price;
     private String articleNumber;
@@ -13,7 +13,7 @@ public class ComputerComponent {
         this.vendor = vendor;
         this.name = name;
         this.price = price;
-        this.createArticleNumber();
+        createArticleNumber();
     }
 
     public String getVendor() {
@@ -54,11 +54,11 @@ public class ComputerComponent {
             counter = 3 - vendor.length();
             temporary = vendor.toUpperCase();
             for (int i = 0; i < counter; i++){
-                temporary = temporary + "X";
+                temporary += "X";
             }
         }
 
-        temporary = temporary + "-";
+        temporary += "-";
 
         //Unique number
         Random rand = new Random();
@@ -67,13 +67,15 @@ public class ComputerComponent {
             counter = 5 - number.length();
 
             for (int i = 0; i < counter; i++){
-                temporary = temporary + 0;
+                temporary += 0;
             }
 
-            temporary = temporary + number;
+            temporary += number;
         }else{
-            temporary = temporary + number;
+            temporary += number;
         }
+
+        articleNumber = temporary;
     }
 
     @Override

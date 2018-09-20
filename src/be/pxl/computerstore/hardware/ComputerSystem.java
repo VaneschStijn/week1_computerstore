@@ -8,23 +8,21 @@ public class ComputerSystem implements Computable {
     private HardDisk hardDisk;
     private ComputerCase computerCase;
     private int counter = 0;
-    private Peripheral[] peripherals = new Peripheral[3];
+    private Peripheral[] peripherals = new Peripheral[MAX_PERIPHERAL];
     public static final int MAX_PERIPHERAL = 3;
 
-    public void addPeripheral(Peripheral peripheral){
-        try {
+    public void addPeripheral(Peripheral peripheral) throws TooManyPeripheralsException {
+        if (counter < MAX_PERIPHERAL) {
             peripherals[counter] = peripheral;
             counter++;
-            throw new TooManyPeripheralsException("Too many peripherals");
-        }
-        catch(TooManyPeripheralsException e){
-            System.out.println("De error is : " + e.getMessage());
+        } else {
+            throw new TooManyPeripheralsException("Geen plaats meer");
         }
     }
 
-    public void removePeripheral(String articleNumber){
-        for(int index = 0; index < MAX_PERIPHERAL; index++){
-            if(peripherals[index].getArticleNumber().equals(articleNumber)){
+    public void removePeripheral(String articleNumber) {
+        for (int index = 0; index < MAX_PERIPHERAL; index++) {
+            if (peripherals[index].getArticleNumber().equals(articleNumber)) {
                 peripherals[index] = null;
             }
         }
@@ -34,14 +32,8 @@ public class ComputerSystem implements Computable {
         return peripherals;
     }
 
-    public int getNumberOfPeripherals(){
-        int amountPeripherals = 0;
-        for(int index = 0; index < MAX_PERIPHERAL; index++){
-            if(peripherals[index] != null){
-                amountPeripherals++;
-            }
-        }
-        return  amountPeripherals;
+    public int getNumberOfPeripherals() {
+        return counter;
     }
 
     public Processor getProcessor() {
@@ -70,8 +62,23 @@ public class ComputerSystem implements Computable {
 
     @Override
     public double totalPriceExcl() {
-        double priceTotal;
-        priceTotal = processor.getPrice() + hardDisk.getPrice() + computerCase.getPrice();
+        double priceTotal = 0.0;
+        if (processor != null) {
+            priceTotal += processor.getPrice();
+        }
+        if (hardDisk != null) {
+            priceTotal += hardDisk.getPrice();
+        }
+        if (computerCase != null){
+            priceTotal += computerCase.getPrice();
+        }
+
+        for(Peripheral currentValue : peripherals){
+            if(currentValue != null){
+                priceTotal += currentValue.getPrice();
+            }
+        }
+
         return priceTotal;
     }
 }
